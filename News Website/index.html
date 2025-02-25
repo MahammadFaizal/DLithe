@@ -1,66 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DLithe News</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DLithe News</title>
+  <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <header>
-        <h1 style="text-align: center;">DLithe News</h1>
-        <nav>
-            <a href="#politics">Politics</a> | 
-            <a href="#sports">Sports</a> | 
-            <a href="#entertainment">Entertainment</a> | 
-            <a href="#technology">Technology</a>
-        </nav>
-        <hr>
-    </header>
+  <header>
+    <h1 style="text-align: center; font-size: 60px;">DLithe News</h1>
+    <nav>
+      <a href="">All </a> :
+      <a href="#politics" class="filter-link">Politics</a> | 
+      <a href="#sports" class="filter-link">Sports</a> | 
+      <a href="#entertainment" class="filter-link">Entertainment</a> | 
+      <a href="#weather" class="filter-link">Weather</a>
+    </nav>
+    <hr>
+  </header>
+  
+  <div style="text-align: center; margin: 20px;">
+    <a href="Registration_Form/index.html" target="_blank">
+      <button style="height: 50px; width: 400px; background-color: rgb(75, 66, 66); color: rgb(255, 255, 255); font-size: 20px; border-radius: 8px; font-family: strain;">
+        Register for More features
+      </button>
+    </a>
+  </div>
+  
+  <div class="overlay show"></div>
+  <div class="popup show">
+    <h2>Register Now!</h2>
+    <p>Join us today and enjoy exclusive benefits.</p>
+    <a href="Registration_Form/index.html" target="_blank">
+      <button class="register-btn">Register</button>
+    </a>
+    <br>
+    <button class="close-btn">Close</button>
+  </div>
+  <section id="politics">
+    <h2>Politics</h2>
+    <article>
+      <h3>Political decisions change overnight, says Dy CM</h3>
+      <img src="image\1831327-shivakumar.webp"alt="">
+      <p>BENGALURU: “Anything can happen in politics overnight,” said president of Karnataka Pradesh Congress Committee (KPCC) and Deputy Chief Minister D.K. Shivakumar in Bengaluru on Monday responding to a query on nominations to the Legislative Council. Shivakumar was asked whether nominations to the Legislative Council can happen before or after the budget session. The budget session will commence on March 3 and Chief Minister Siddaramaiah holding the Finance portfolio is set to present the budget on March 7.</p>
+      
+  </article>
+  <hr>
+    <article>
+      <h3>Mamata said against BJP</h3>
+      <img src="image/OIP.jpg" alt="mamata">
+      <p>Good evening readers. West Bengal CM Mamata Banerjee took a dig at BJP govt in UP over the death toll in Maha Kumbh 2025...</p>
+    </article>
+    <hr>
+  </section>
+  <div>
+    <h2 style="color: crimson; text-align: center;">Advertisement</h2>
+    <a href="https://book.olacabs.com/" target="_blank">
+    <img src="image/download (3).jpg" alt="Ad Banner" class="moving-ad">
+</a>
 
-    <section id="politics">
-        <h2>Politics</h2>
-        <article>
-            <h3>Mamata said against BJP</h3>
-            <img src="image/OIP.jpg" alt="mamata">
-            <p>Good evening readers. West Bengal CM Mamata Banerjee took a dig at BJP govt in UP over the death toll in Maha Kumbh 2025. Meanwhile, the fissures in Shiv Sena (UBT) camp is opening up with Rajan Salvi, the ex MLA from Rajapur resigning as Deputy Lead...</p>
-        </article>
-        <hr>
-    </section>
+</div>
+  <section id="sports">
+    <h2>Sports</h2>
+    <article>
+      <h3>Virat Kohli wins hearts across the border as Pakistani fans celebrate his 51st ODI century | Watch Viral video</h3>
+      <img src="image\AA1zDKtN.jpg" alt="mivsgt" height="400px" width="400px">
+      <p>Virat Kohli is not only an undisputed Indian legend but also an ambassador for the game with his fitness, hard work and sheer eagerness to play tough no matter the circumstances. Virat Kohli's style of play has long been appreciated not only by Indian fans, but also by fans across the border, and the India-Pakistan match in Dubai was yet another testament to that.</p>
+    </article>
+    <hr>
+    <article>
+      <h3>WPL MI vs GT</h3>
+      <img src="image/download.jpg" alt="mivsgt" height="400px" width="400px">
+      <p>Match No 5 of WPL 2025 will see Gujarat Giants Women (GG-W) face Mumbai Indians (MI-W) at the Kotambi Stadium...</p>
+    </article>
+    <hr>
+  </section>
+  <div>
+    <h2 style="color: crimson; text-align: center;">Advertisement</h2>
+    <a href="https://book.olacabs.com/" target="_blank">
+    <img src="image/download (3).jpg" alt="Ad Banner" class="moving-ad">
+</a>
 
-    <section id="sports">
-        <h2>Sports</h2>
-        <article>
-            <h3>WPL MI vs GT</h3>
-            <img src="image/download.jpg" alt="mivsgt" height="400px" width="400px">
-            <p>Match No 5 of WPL 2025 will see Gujarat Giants Women (GG-W) ready to face Mumbai Indians (MI-W) at the Kotambi Stadium in Vadodara. Giants began their campaign with 6 6-wicket win over UP Warrioz before succumbing to their first defeat of the season at the hands of Royal Challengers Bangalore. The Smriti Mandhana led side chased down the target of 202 runs with 6 wickets to spare. On the other hand, Mumbai Indians suffered a heartbreaking 2-wicket loss against Delhi Capitals women in their opening match of the WPL 2025.This matchup will provide an opportunity for the Gujarat team to break their winless streak against the Mumbai team. The Harmanpreet Kaur-led MI hold a 4-0 record against them but GG has shown that they are no walkovers after their display in the opening match.</p>
-        </article>
-        <hr>
-    </section>
+</div>
 
-    <section id="entertainment">
-        <h2>Movie Collection</h2>
-        <article>
-            <h3>Entertainment News Headline</h3>
-            <img src="image\MV5BMWI4N2Y5NWUtNzEwOC00YjYzLWEzY2ItN2YwYTIxYzBjZGZmXkEyXkFqcGc@._V1_.jpg" alt="chavva" height="600px" width="400px">
-            <p>Chhaava box office collection day 4: After a string of commercial disappointments, actor Vicky Kaushal has not only made a massive comeback but is also poised to deliver Bollywood’s first blockbuster of 2025 with the historical actioner Chhaava. At the same time, the film has also reinforced Rashmika Mandanna’s reputation as a lucky charm at the box office, marking her fourth consecutive theatrical hit after Varisu (2023), Animal (2023) and Pushpa 2: The Rule (2024). Following a stellar debut and a strong opening weekend performance, the movie successfully passed the crucial first Monday test, earning nearly twice the combined total of the next seven highest-grossing Hindi films of the year on their respective first Mondays.</p>
-        </article>
-        <hr>
-    </section>
+  <!-- Entertainment Section -->
+  <section id="entertainment">
+    <h2>Entertainment</h2>
+    <article>
+      <h3>Entertainment News Headline</h3>
+      <img src="image/MV5BMWI4N2Y5NWUtNzEwOC00YjYzLWEzY2ItN2YwYTIxYzBjZGZmXkEyXkFqcGc@._V1_.jpg" alt="chavva" height="600px" width="400px">
+      <p>Chhaava box office collection day 4: After a string of commercial disappointments, actor Vicky Kaushal has made a massive comeback...</p>
+    </article>
+    <hr>
+  </section>
+  <div>
+    <h2 style="color: crimson; text-align: center;">Advertisement</h2>
+    <a href="https://book.olacabs.com/" target="_blank">
+    <img src="image/download (3).jpg" alt="Ad Banner" class="moving-ad">
+</a>
 
-    <section id="technology">
-        <h2>S25 Ultra with AI</h2>
-        <article>
-            <h3>Tech News Headline</h3>
-            <img src="image\download (1).jpg" alt="s25" height="400px" width="400px">
-            <p>Samsung’s latest Galaxy S25 series phones come with updated AI features that offer enhanced capabilities in terms of the overall functionality of the phone. However, the camera department, especially the editing features has been improved and if you are wondering how AI is making your photography capabilities and editing capabilities better on the Galaxy S25 series phones, here are 5 things that you should know.This is perhaps the best you can find in any smartphone – including iPhone. The Generative edit feature lets you not only erase some things seamlessly – better than an object eraser – but also allows you to make certain changes as per your needs and preferences. Powered by Google’s Imagen 2 technology, this tool intelligently fills in the background after edits, ensuring a natural and polished look. Whether you’re removing unwanted distractions or repositioning elements for better composition.</p>
-        </article>
-        <hr>
-    </section>
+</div>
 
-    <footer>
-        <p>&copy; 2025 DLithe News. All Rights Reserved.</p>
-    </footer>
+  <!-- Weather Section -->
+  <section id="weather">
+    <h2>Weather</h2>
+    <article>
+      <h3>Weather Forecast for Today</h3>
+      <img src="image\OIP (1).jpg" alt="weather" height="400px" width="400px">
+      <p>Today's weather is sunny with a high of 32°C and a low of 24°C. Expect clear skies throughout the day with light breezes...</p>
+    </article>
+    <hr>
+  </section>
 
+  <footer>
+    <p>&copy; 2025 DLithe News. All Rights Reserved.</p>
+  </footer>
+  
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>

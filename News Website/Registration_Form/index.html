@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .error {
+      color: red;
+      font-size: 0.9em;
+      display: none;
+    }
+    input:invalid {
+      border-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form id="registrationForm" action="#" onsubmit="return validateForm()">
+        <div class="user-details">
+          <!-- Full Name -->
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" id="fullName" placeholder="Enter your name" required>
+            <span class="error" id="nameError">Enter a valid name (alphabets only)</span>
+          </div>
+
+          <!-- Date of Birth -->
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="text" id="dob" placeholder="dd/mm/yyyy" required>
+            <span class="error" id="dobError">Enter a valid date in dd/mm/yyyy format (year ≤ 2025)</span>
+          </div>
+
+          <!-- Email -->
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" id="email" placeholder="Enter your email" required>
+            <span class="error" id="emailError">Enter a valid email address</span>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" id="phone" placeholder="Enter your number" required>
+            <span class="error" id="phoneError">Enter a valid 10-digit mobile number</span>
+          </div>
+
+          <!-- Password -->
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <span class="error" id="passwordError">Password must be at least 8 characters long</span>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+            <span class="error" id="confirmPasswordError">Passwords do not match</span>
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

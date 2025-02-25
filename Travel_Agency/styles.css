@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -38,7 +38,7 @@ nav a:hover {
     background: #1e88e5;
 }
 
-/* Section Styles */
+
 section {
     padding: 25px;
     margin: 20px auto;
@@ -58,7 +58,7 @@ section p {
     color: #444;
 }
 
-/* Table Styles */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -88,7 +88,7 @@ tr:hover {
     transition: 0.3s;
 }
 
-/* List Styles */
+
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -101,7 +101,7 @@ ul li {
     border-radius: 6px;
 }
 
-/* Footer Styles */
+
 footer {
     text-align: center;
     padding: 15px;
@@ -114,3 +114,5 @@ footer {
 footer p {
     margin: 0;
 }
+
+
