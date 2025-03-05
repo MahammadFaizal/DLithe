@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Java Script</title>
+    <script src="script.js"></script>
+</head>
+    <body>
+        <div class="container">
+            <h2>Calculator</h2>
+            <input type="text" id="num1" placeholder="Enter First Number">
+            <input type="text" id="num2" placeholder="Enter Second Number">
+            <div class="buttons">
+                <button onclick="calculate('+')">Addition</button>
+                <button onclick="calculate('-')">Subtraction</button>
+                <button onclick="calculate('*')">Multiplication</button>
+                <button onclick="calculate('/')">Division</button>
+            </div>
+            <p id="result"></p>
+        </div>
+        <div class="container">
+            <h2>Fahrenheit to Celsius Converter</h2>
+            <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit">
+            <button onclick="convertToCelsius()">Convert</button>
+            <p id="tempResult"></p>
+        </div>
+        <div class="container">
+            <h2>Decimal to Binary Converter</h2>
+            <input type="number" id="decimal" placeholder="Enter Decimal Number">
+            <button onclick="convertToBinary()">Convert</button>
+            <p id="binaryResult"></p>
+        </div>
+        <div class="container">
+            <h2>Prime Number Checker</h2>
+            <input type="number" id="number" placeholder="Enter a Number">
+            <button onclick="checkPrime()">Check</button>
+            <p id="primeResult"></p>
+        </div>
+
+    
+    
+</body>
+</html>

@@ -57,6 +57,9 @@ section h2 {
 section p {
     color: #444;
 }
+section a{
+    text-align: center;
+}
 
 
 table {

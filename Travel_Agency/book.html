@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBus Booking</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+        header {
+            background-color: #1565c0;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        section {
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 850px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #1565c0;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EasyBus Booking</h1>
+    </header>
+    
+    <section>
+        <h2>Register</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+    
+    <section>
+        <h2>Book Your Ticket</h2>
+        <form>
+            <label for="from">From:</label>
+            <select id="from" required>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+            <label for="to">To:</label>
+            <select id="to" required>
+                <option value="Mangalore">Mangalore</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Agra">Agra</option>
+            </select>
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,4 +1,4 @@
-// Function to validate Full Name
+
 function validateFullName() {
     const fullName = document.getElementById('fullName').value;
     const nameRegex = /^[A-Za-z\s]+$/;
@@ -11,7 +11,6 @@ function validateFullName() {
     }
   }
   
-  // Function to validate Date of Birth
   function validateDOB() {
     const dob = document.getElementById('dob').value;
     const dobRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19\d{2}|20[0-2][0-5])$/;
@@ -24,7 +23,6 @@ function validateFullName() {
     }
   }
   
-  // Function to validate Email
   function validateEmail() {
     const email = document.getElementById('email').value;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -37,7 +35,6 @@ function validateFullName() {
     }
   }
   
-  // Function to validate Phone Number
   function validatePhone() {
     const phone = document.getElementById('phone').value;
     const phoneRegex = /^\d{10}$/;
@@ -60,8 +57,7 @@ function validateFullName() {
       return true;
     }
   }
-  
-  // Function to validate Confirm Password
+   
   function validateConfirmPassword() {
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
@@ -74,7 +70,6 @@ function validateFullName() {
     }
   }
   
-  // Attach event listeners for immediate validation
   document.getElementById('fullName').addEventListener('blur', validateFullName);
   document.getElementById('dob').addEventListener('blur', validateDOB);
   document.getElementById('email').addEventListener('blur', validateEmail);
@@ -82,7 +77,6 @@ function validateFullName() {
   document.getElementById('password').addEventListener('blur', validatePassword);
   document.getElementById('confirmPassword').addEventListener('blur', validateConfirmPassword);
   
-  // Final form validation on submit
   function validateForm() {
     const isFullNameValid = validateFullName();
     const isDOBValid = validateDOB();
