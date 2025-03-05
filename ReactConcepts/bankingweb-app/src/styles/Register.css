@@ -1,0 +1,9 @@
+.register-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .register-container h2 {
+    color: #007bff;
+  }

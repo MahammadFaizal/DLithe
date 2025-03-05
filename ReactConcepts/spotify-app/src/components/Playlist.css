@@ -1,0 +1,28 @@
+.playlist {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    width: 30%;
+  }
+  
+  .playlist h2 {
+    margin-top: 0;
+  }
+  
+  .playlist ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .playlist li {
+    padding: 10px;
+    background-color: #333;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .playlist li:hover {
+    background-color: #444;
+  }
