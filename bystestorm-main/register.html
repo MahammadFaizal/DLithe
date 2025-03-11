@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Account</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Register Account</h2>
+      <input type="text" id="accNo" placeholder="Account Number" />
+      <input type="text" id="accHolder" placeholder="Account Holder Name" />
+      <input type="text" id="ifsc" placeholder="IFSC Code" />
+      <input type="text" id="phone" placeholder="Phone Number" />
+      <input type="text" id="branch" placeholder="Bank Branch" />
+      <button onclick="registerAccount()">Register</button>
+    </div>
+
+    <script>
+      function registerAccount() {
+        let accNo = document.getElementById("accNo").value.trim();
+        let accHolder = document.getElementById("accHolder").value.trim();
+        let ifsc = document.getElementById("ifsc").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let branch = document.getElementById("branch").value.trim();
+
+        if (!accNo.match(/^\d{10,}$/)) {
+          alert("Invalid Account Number! It should be at least 10 digits.");
+          return;
+        }
+        if (!accHolder.match(/^[A-Za-z\s]+$/)) {
+          alert("Invalid Account Holder Name! Only letters allowed.");
+          return;
+        }
+        if (!ifsc.match(/^[A-Z]{4}[0-9]{7}$/)) {
+          alert("Invalid IFSC Code! Format: 4 letters + 7 numbers.");
+          return;
+        }
+        if (!phone.match(/^\d{10}$/)) {
+          alert("Invalid Phone Number! It should be exactly 10 digits.");
+          return;
+        }
+        if (!branch) {
+          alert("Please enter the Bank Branch.");
+          return;
+        }
+
+
+        let userData = {
+          accNo,
+          accHolder,
+          ifsc,
+          phone,
+          branch,
+          balance: 0, 
+        };
+
+        
+        localStorage.setItem(accNo, JSON.stringify(userData));
+
+        alert("Account Registered Successfully!");
+        window.location.href = "dashboard.html";
+      }
+    </script>
+  </body>
+</html>

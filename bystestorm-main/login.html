@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <input type="text" id="accNo" placeholder="Enter Account Number" />
+      <button onclick="loginUser()">Login</button>
+      <button onclick="redirectToRegister()">Register</button>
+    </div>
+
+    <script>
+      function loginUser() {
+        let accNo = document.getElementById("accNo").value.trim();
+
+       
+        let userData = localStorage.getItem(accNo);
+        if (!userData) {
+          alert("Account not found! Please register.");
+          return;
+        }
+
+        
+        localStorage.setItem("loggedInUser", accNo);
+
+        alert("Login Successful!");
+        window.location.href = "dashboard.html";
+      }
+
+      function redirectToRegister() {
+        window.location.href = "register.html";
+      }
+    </script>
+  </body>
+</html>

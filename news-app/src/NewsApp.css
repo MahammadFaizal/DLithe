@@ -1,0 +1,76 @@
+/* NewsApp.css */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: gray;
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .news-card {
+    border: 1px solid #000000;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
+  
+  .news-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .news-description {
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  .news-card:hover{
+    transform: scale(1.05);
+    transition-duration: 1s;
+    background-color:honeydew;
+  }
+  

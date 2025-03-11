@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div>
-      <h2>Welcome to the Banking App</h2>
+      <h2>Welcome to the ByteStorm Bank</h2>
       <button onClick={() => navigate('/services')}>Go to Services</button>
     </div>
   );

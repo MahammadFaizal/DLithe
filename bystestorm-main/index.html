@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Features</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url("home.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+        text-align: center;
+      }
+
+      .navbar {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+      }
+
+      .nav-links {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 10px 15px;
+        transition: background 0.3s;
+        border-radius: 10px;
+      }
+
+      .nav-links li a:hover {
+        background-color: #16325c;
+      }
+
+      
+      .bank-name {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+      .bank-name h1 {
+        margin: 0;
+        font-size: 32px;
+        color: #203a43;
+      }
+
+     
+      .about-btn {
+        background-color: #2a5298;
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        border-radius: 10px;
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 16px;
+        transition: background 0.3s;
+      }
+
+      .about-btn:hover {
+        background-color: #1e3c72;
+      }
+
+      .features-section {
+        margin: 50px auto;
+        max-width: 900px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #203a43;
+      }
+
+      .features-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        width: 270px;
+        text-align: left;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-left: 5px solid #2a5298;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .feature-card h4 {
+        margin: 0 0 10px;
+        color: #2a5298;
+        font-size: 20px;
+      }
+
+      .feature-card p {
+        margin: 0;
+        color: #555;
+        font-size: 15px;
+        line-height: 1.4;
+      }
+
+      .login-card {
+        background: linear-gradient(135deg, #f8f9fa, #e3eaf4);
+        text-align: center;
+        border-left: none;
+        border-top: 5px solid #ff4d4d;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+      }
+
+      .login-card:hover {
+        background: linear-gradient(135deg, #eaeef4, #d1d9e6);
+        transform: translateY(-5px);
+      }
+
+      .footer {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+        padding: 20px;
+        margin-top: 50px;
+        text-align: center;
+        border-radius: 15px 15px 0 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">ContactUs</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="sinup.html">SinIn</a></li>
+      </ul>
+    </div>
+
+    <div class="bank-name">
+      <h1>🏦 ByteStorm Bank</h1>
+      <a href="about.html" class="about-btn">About Us</a>
+    </div>
+
+    <section class="features-section">
+      <h3>Banking Features</h3>
+      <div class="features-container">
+        <div class="feature-card">
+          <h4>🔒 Secure Transactions</h4>
+          <p>Your money is safe with our encrypted security.</p>
+        </div>
+        <div class="feature-card">
+          <h4>⚡ Instant Transfers</h4>
+          <p>Send and receive money quickly and easily.</p>
+        </div>
+        <div class="feature-card">
+          <h4>💳 Bill Payments</h4>
+          <p>Pay bills and recharge your phone anytime.</p>
+        </div>
+        <div class="feature-card login-card" onclick="redirectToLogin()">
+          <h4>🔑 Access More Features</h4>
+          <p>Click here to login and access these features.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>© 2025 Future Bank. All rights reserved.</p>
+      <p>contact us on 222-222-222</p>
+    </div>
+
+    <script>
+      function redirectToLogin() {
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

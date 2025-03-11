@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Welcome to Your Bank</h2>
+      <p>Current Balance: <span id="balance">$0</span></p>
+
+      <button onclick="navigate('deposit.html')">Deposit</button>
+      <button onclick="navigate('withdraw.html')">Withdraw</button>
+      <button onclick="navigate('balance.html')">Balance</button>
+      <button onclick="navigate('loan.html')">Loan</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+      function loadUserData() {
+        let accNo = localStorage.getItem("loggedInUser");
+        if (!accNo) {
+          alert("No user logged in!");
+          window.location.href = "login.html";
+          return;
+        }
+
+        let userData = JSON.parse(localStorage.getItem(accNo));
+        if (userData && userData.balance !== undefined) {
+          document.getElementById("balance").innerText = `$${userData.balance}`;
+        } else {
+          document.getElementById("balance").innerText = "$0"; // Default if no data is found
+        }
+      }
+
+      function navigate(page) {
+        window.location.href = page;
+      }
+
+      function logout() {
+        localStorage.removeItem("loggedInUser");
+        alert("Logged out successfully!");
+        window.location.href = "login.html";
+      }
+
+      window.onload = loadUserData;
+    </script>
+  </body>
+</html>

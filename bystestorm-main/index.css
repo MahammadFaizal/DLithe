@@ -1,0 +1,96 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+}
+
+.navbar {
+  background-color: #1e3c72;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 15px 15px;
+  padding: 10px 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links li {
+  padding: 14px 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.nav-links li a:hover {
+  background-color: #16325c;
+}
+
+.home-content {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.home-content h1 {
+  font-size: 2.5em;
+  color: #1e3c72;
+}
+
+.home-content p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #2a5298;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #1e3c72;
+}
+
+.footer {
+  background-color: #2a5298;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px 20px 0 0;
+  margin-top: 40px;
+}

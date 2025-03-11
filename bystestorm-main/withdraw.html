@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Withdraw</title>
+    <link rel="stylesheet" href="withdraw.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Withdraw Money</h2>
+      <p>Current Balance: <span id="balance">$0</span></p>
+      <input type="number" id="withdrawAmount" placeholder="Enter Amount" />
+      <button onclick="withdraw()">Withdraw</button>
+    </div>
+
+    <script>
+      function loadUserData() {
+        let accNo = localStorage.getItem("loggedInUser");
+        if (!accNo) {
+          alert("No user logged in!");
+          window.location.href = "login.html";
+          return;
+        }
+
+        let userData = JSON.parse(localStorage.getItem(accNo)) || {
+          balance: 0,
+        };
+        document.getElementById("balance").innerText = `$${userData.balance}`;
+      }
+
+      function withdraw() {
+        let amount = parseFloat(
+          document.getElementById("withdrawAmount").value
+        );
+        let accNo = localStorage.getItem("loggedInUser");
+
+        if (!accNo) return;
+
+        let userData = JSON.parse(localStorage.getItem(accNo)) || {
+          balance: 0,
+        };
+
+        if (isNaN(amount) || amount <= 0) {
+          alert("Please enter a valid amount!");
+          return;
+        }
+
+        if (userData.balance - amount < 100) {
+          alert(
+            "Insufficient funds! Minimum balance of $100 must be maintained."
+          );
+          return;
+        }
+
+        userData.balance -= amount;
+        localStorage.setItem(accNo, JSON.stringify(userData));
+
+        // Update balance on UI
+        document.getElementById("balance").innerText = `$${userData.balance}`;
+
+        alert("Withdrawal Successful!");
+        window.location.href = "dashboard.html";
+      }
+
+      window.onload = loadUserData;
+    </script>
+  </body>
+</html>

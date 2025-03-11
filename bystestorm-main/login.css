@@ -1,0 +1,70 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("home.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px; /* Slightly increased for better layout */
+}
+
+h2 {
+  color: #203a43;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+input {
+  width: 91%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #2a5298;
+  box-shadow: 0px 0px 5px rgba(42, 82, 152, 0.5);
+  outline: none;
+}
+
+button {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%; /* Ensures buttons are aligned perfectly */
+  margin: 8px 0;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1e3c72, #16325c);
+  transform: scale(1.03);
+}
+
+button:nth-of-type(2) {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+button:nth-of-type(2):hover {
+  background: linear-gradient(135deg, #218838, #166534);
+  transform: scale(1.03);
+}

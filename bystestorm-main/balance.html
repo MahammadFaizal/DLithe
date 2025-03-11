@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance</title>
+    <link rel="stylesheet" href="balance.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Your Balance</h2>
+      <p>Current Balance: <span id="balance">$0</span></p>
+      <button onclick="redirectToDashboard()">OK</button>
+    </div>
+    <script>
+      function loadBalance() {
+        let accNo = localStorage.getItem("loggedInUser");
+        if (!accNo) {
+          alert("No user logged in!");
+          window.location.href = "login.html";
+          return;
+        }
+
+        let userData = JSON.parse(localStorage.getItem(accNo));
+        let balance =
+          userData && userData.balance !== undefined ? userData.balance : 0;
+
+        document.getElementById("balance").innerText = `$${balance}`;
+      }
+
+      function redirectToDashboard() {
+        window.location.href = "dashboard.html";
+      }
+
+      window.onload = loadBalance;
+    </script>
+  </body>
+</html>

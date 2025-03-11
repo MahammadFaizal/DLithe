@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan</title>
+    <link rel="stylesheet" href="loan.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Apply for Loan</h2>
+
+      <select id="loanType" onchange="setInterest()">
+        <option value="" disabled selected>Select Loan Type</option>
+        <option value="6.5">Home Loan</option>
+        <option value="5.0">Education Loan</option>
+        <option value="7.5">Car Loan</option>
+        <option value="10.0">Personal Loan</option>
+      </select>
+
+      <input type="number" id="loanAmount" placeholder="Loan Amount" />
+      <input
+        type="number"
+        id="interest"
+        placeholder="Interest Rate (%)"
+        readonly
+      />
+      <input type="number" id="validity" placeholder="Loan Validity (Years)" />
+
+      <button onclick="calculateLoan()">Calculate</button>
+      <p>Total Amount at Maturity: <span id="totalLoan">$0</span></p>
+
+      <button onclick="applyLoan()">Apply</button>
+    </div>
+
+    <script>
+      let calculatedTotal = 0; // Store total loan amount after calculation
+
+      function setInterest() {
+        let loanDropdown = document.getElementById("loanType");
+        let selectedInterest = loanDropdown.value;
+        document.getElementById("interest").value = selectedInterest;
+      }
+
+      function calculateLoan() {
+        let amount = parseFloat(document.getElementById("loanAmount").value);
+        let interest = parseFloat(document.getElementById("interest").value);
+        let years = parseFloat(document.getElementById("validity").value);
+
+        if (
+          isNaN(amount) ||
+          isNaN(interest) ||
+          isNaN(years) ||
+          amount <= 0 ||
+          years <= 0
+        ) {
+          alert("Invalid input! Please fill all fields correctly.");
+          return;
+        }
+
+        calculatedTotal = amount + (amount * interest * years) / 100;
+        document.getElementById(
+          "totalLoan"
+        ).innerText = `$${calculatedTotal.toFixed(2)}`;
+      }
+
+      function applyLoan() {
+        let loanType = document.getElementById("loanType").value;
+        let amount = parseFloat(document.getElementById("loanAmount").value);
+        let interest = parseFloat(document.getElementById("interest").value);
+        let years = parseFloat(document.getElementById("validity").value);
+
+        if (
+          !loanType ||
+          isNaN(amount) ||
+          isNaN(interest) ||
+          isNaN(years) ||
+          calculatedTotal === 0
+        ) {
+          alert("Invalid input! Please calculate the loan before applying.");
+          return;
+        }
+
+        alert("Loan Applied Successfully!");
+        window.location.href = "dashboard.html";
+      }
+    </script>
+  </body>
+</html>

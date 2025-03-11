@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - ByteStorm Bank</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #141e30, #243b55);
+        color: #fff;
+        text-align: center;
+      }
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+      }
+      h1 {
+        color: #f1c40f;
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+      }
+      .contact-form label {
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 1em;
+      }
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder {
+        color: #ddd;
+      }
+      .contact-form button {
+        background: #f1c40f;
+        color: #333;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .contact-form button:hover {
+        background: #ffdb4d;
+      }
+      .contact a {
+        color: #f1c40f;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .contact a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>
+        If you have any questions, feel free to reach out to us using the form
+        below.
+      </p>
+      <form class="contact-form">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Write your message here"
+          required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p class="contact">
+        📩 Email:
+        <a href="mailto:support@bytestormbank.com">support@bytestormbank.com</a>
+      </p>
+      <p class="contact">📍 Address: 123 Finance Street, New York, NY</p>
+    </div>
+  </body>
+</html>
